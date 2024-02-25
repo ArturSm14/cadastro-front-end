@@ -2,9 +2,9 @@ import React from 'react'
 import MenuLink from "../MenuLink/MenuLink.jsx";
 import Campo from "../Campo/Campo.jsx";
 
-const Formulario = ({ TypeForm, Ativo = true, NomeBtn }) => {
+const Formulario = ({ LightMode = false, TypeForm, Ativo = true, NomeBtn }) => {
     return (
-        <div className="mx-auto flex min-h-screen w-full items-center justify-center bg-gray-900 text-white">
+        <div className={LightMode === true ? "mx-auto flex min-h-screen w-full items-center justify-center bg-white text-black " : "mx-auto flex min-h-screen w-full items-center justify-center bg-gray-900 text-white "}>
             <section className="flex w-[30rem] flex-col space-y-10">
                 <div className="text-center text-4xl font-medium">{TypeForm}</div>
 
