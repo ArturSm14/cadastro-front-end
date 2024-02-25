@@ -1,5 +1,6 @@
 import React from 'react'
 import MenuLink from "../MenuLink/MenuLink.jsx";
+import Campo from "../Campo/Campo.jsx";
 
 const Formulario = ({ TypeForm, Ativo = true, NomeBtn }) => {
     return (
@@ -7,33 +8,22 @@ const Formulario = ({ TypeForm, Ativo = true, NomeBtn }) => {
             <section className="flex w-[30rem] flex-col space-y-10">
                 <div className="text-center text-4xl font-medium">{TypeForm}</div>
 
-                <div
-                    className="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
-                >
-                    <input
-                        type="text"
-                        placeholder="Email ou Username"
-                        className="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
-                    />
-                </div>
+                <Campo
+                    placeholder="Email ou Usuário"
+                    TypeForm={TypeForm}
+                    TypeInput="email"
+                />
 
-                <div
-                    className="w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500"
-                >
-                    <input
-                        type="password"
-                        placeholder="Senha"
-                        className="w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none"
-                    />
-                </div>
-                <div
-                    className={TypeForm === 'Cadastro' ?'w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500' : 'hidden'}
-                >
-                    <input
-                        type="date"
-                        className='w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none'
-                    />
-                </div>
+                <Campo
+                    placeholder="Senha"
+                    TypeForm={TypeForm}
+                    TypeInput="password"
+                />
+
+                <Campo
+                    TypeForm={TypeForm}
+                    TypeInput="date"
+                />
 
                 <button
                     className="transform rounded-b-3xl bg-indigo-600 py-2 font-bold duration-300 hover:bg-indigo-400"
