@@ -17,6 +17,15 @@
       "ativo": false,
       "data_de_Nascimento": "1992-02-02",
       "data_do_cadastro": "2024-02-27"
+    },
+    {
+      "id": 3,
+      "login": "pedrobenj",
+      "senha": "senha3",
+      "nome": "Pedro Benjamin",
+      "ativo": true,
+      "data_de_Nascimento": "1999-09-11",
+      "data_do_cadastro": "2024-03-05"
     }
   ]
 }
