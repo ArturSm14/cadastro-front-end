@@ -1,0 +1,22 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "login": "Artursm14",
+      "senha": "senha1",
+      "nome": "Antonio Artur",
+      "ativo": true,
+      "data_de_Nascimento": "1990-01-01",
+      "data_do_cadastro": "2024-02-27"
+    },
+    {
+      "id": 2,
+      "login": "Joaozinho1",
+      "senha": "senha2",
+      "nome": "Joao",
+      "ativo": false,
+      "data_de_Nascimento": "1992-02-02",
+      "data_do_cadastro": "2024-02-27"
+    }
+  ]
+}
