@@ -9,7 +9,7 @@ const Menu = () => {
             <nav className="flex items-center justify-center w-full gap-5">
                 <MenuLink to="/" children="Cadastro"/>
                 <MenuLink to="/Login" children="Login"/>
-                <MenuLink to="/Usuarios" children="Usuarios"/>
+                <MenuLink to="/UsuariosCadastrados" children="Usuarios"/>
             </nav>
 
         </header>

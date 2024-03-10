@@ -1,43 +1,80 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MenuLink from "../MenuLink/MenuLink.jsx";
 import Campo from "../Campo/Campo.jsx";
+import SubmitButton from '../SubmitButton/SubmitButton.jsx';
 
-const Formulario = ({ LightMode = false, TypeForm, Ativo = true, NomeBtn }) => {
+const Formulario = ({ lightMode = false, typeForm = "Cadastro"  , ativo = true, nomeBtn = "Cadastrar", handleSubmit, cadastroData }) => {
+
+    const [cadastro, setCadastro] = useState(cadastroData || {})
+
+    const submit = (e) => {
+        e.preventDefault()
+        //console.log(cadastro)
+        handleSubmit(cadastro)
+    }
+
+    function handleChange(e) {
+        setCadastro({...cadastro, [e.target.name] : e.target.value})
+        // console.info(cadastro)
+    }
+
     return (
-        <div className={LightMode === true ? "mx-auto flex min-h-screen w-full items-center justify-center bg-white text-black " : "mx-auto flex min-h-screen w-full items-center justify-center bg-gray-900 text-white "}>
-            <section className="flex w-[30rem] flex-col space-y-10">
-                <div className="text-center text-4xl font-medium">{TypeForm}</div>
+        <div className={lightMode === true ? "mx-auto flex min-h-screen w-full items-center justify-center bg-white text-black " : "mx-auto flex min-h-screen w-full items-center justify-center bg-gray-900 text-white "}>
+            <form onSubmit={submit} className="flex w-[30rem] flex-col space-y-10">
+                <div className="text-center text-4xl font-medium">{typeForm}</div>
 
                 <Campo
-                    placeholder="Email ou Usuário"
-                    TypeForm={TypeForm}
-                    TypeInput="email"
+                    placeholder="Usuário"
+                    typeForm={typeForm}
+                    typeInput="text"
+                    name="login"
+                    obrigatorio
+                    handleOnChange = {handleChange}
+                    value={cadastro.login ? cadastro.login : ''}
                 />
+                {typeForm === 'Cadastro' ? 
+                    <Campo
+                    placeholder="Nome Completo"
+                    typeForm={typeForm}
+                    typeInput="text"
+                    name="name"
+                    obrigatorio
+                    handleOnChange = {handleChange}
+                    value={cadastro.name ? cadastro.name : ''}
+                />
+                :
+                ''
+            }
+                
 
                 <Campo
                     placeholder="Senha"
-                    TypeForm={TypeForm}
-                    TypeInput="password"
+                    typeForm={typeForm}
+                    typeInput="password"
+                    name="senha"
+                    obrigatorio
+                    handleOnChange = {handleChange}
+                    value={cadastro.senha ? cadastro.senha : ''}
                 />
 
                 <Campo
-                    TypeForm={TypeForm}
-                    TypeInput="date"
+                    typeForm={typeForm}
+                    typeInput="date"
+                    name="date"
+                    obrigatorio
+                    handleOnChange = {handleChange}
+                    value={cadastro.date ? cadastro.date : ''}
                 />
 
-                <button
-                    className="transform rounded-b-3xl bg-indigo-600 py-2 font-bold duration-300 hover:bg-indigo-400"
-                >
-                    {NomeBtn}
-                </button>
+                <SubmitButton nomeBtn={nomeBtn}/>
 
                 <a
                     href="#"
-                    className={Ativo ? "transform text-center font-semibold text-gray-500 duration-300 hover:text-gray-300" : "hidden"}
-                >ESQUECEU SUA SENHA?</a
-                >
+                    className={ ativo ? "transform text-center font-semibold text-gray-500 duration-300 hover:text-gray-300" : "hidden"}
+                >ESQUECEU SUA SENHA?
+                </a>
 
-                <p className={ Ativo ? "text-center text-lg" : "hidden"}>
+                <p className={ ativo ? "text-center text-lg" : "hidden"}>
                     Não tem conta?
                    <MenuLink
                        classname={"font-medium text-indigo-500 underline-offset-4 hover:underline"}
@@ -46,8 +83,9 @@ const Formulario = ({ LightMode = false, TypeForm, Ativo = true, NomeBtn }) => {
                    />
 
                 </p>
-            </section>
+            </form>
         </div>
+    
     )
 }
 export default Formulario

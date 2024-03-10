@@ -1,7 +1,7 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "login": "Artursm14",
       "senha": "senha1",
       "nome": "Antonio Artur",
@@ -10,13 +10,70 @@
       "data_do_cadastro": "2024-02-27"
     },
     {
-      "id": 2,
+      "id": "2",
       "login": "Joaozinho1",
       "senha": "senha2",
       "nome": "Joao",
       "ativo": false,
       "data_de_Nascimento": "1992-02-02",
       "data_do_cadastro": "2024-02-27"
+    },
+    {
+      "id": "b789",
+      "name": "Artursm14",
+      "senha": "artur111418",
+      "date": "2002-11-14",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "f88a",
+      "name": "Cintia123",
+      "senha": "artureuteamo",
+      "date": "2001-04-23",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "6e43",
+      "name": "joaozinho123",
+      "senha": "arturu1",
+      "date": "2030-11-14",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "4e6a",
+      "name": "teste12345",
+      "senha": "oqosksk",
+      "date": "1996-04-22",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "24f6",
+      "name": "teste4",
+      "senha": "atttoeo",
+      "date": "3829-11-14",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "8c58",
+      "name": "teste6",
+      "senha": "test6",
+      "date": "1999-09-11",
+      "cost": 0,
+      "services": []
+    },
+    {
+      "id": "d1d5",
+      "login": "pedrobenj",
+      "name": "Pedro Henrique de Lima Benjamin",
+      "senha": "pedro123",
+      "date": "1998-09-11",
+      "cost": 0,
+      "services": []
     }
   ]
 }

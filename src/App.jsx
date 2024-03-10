@@ -21,9 +21,9 @@ function App() {
               <button onClick={ligarLightMode}> {light === true ? <MdDarkMode size={25} /> : <MdOutlineDarkMode size={25} />}</button>
           </div>
           <Routes>
-              <Route path="/" element={<IncioCadastro LightMode={light}/>} />
+              <Route path="/" element={<IncioCadastro lightMode={light}/>} />
               <Route path="/Login" element={<Login LightMode={light}/>}/>
-              <Route path="/Usuarios" element={<Usuarios />}/>
+              <Route path="/UsuariosCadastrados" element={<Usuarios />}/>
           </Routes>
       </BrowserRouter>
 

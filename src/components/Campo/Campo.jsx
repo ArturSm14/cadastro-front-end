@@ -1,14 +1,18 @@
 import React from 'react'
 
-const Campo = ({ TypeForm, TypeInput,  placeholder}) => {
+const Campo = ({ typeForm, typeInput,  placeholder, obrigatorio = false, name = "name", handleOnChange, value }) => {
     return (
         <div
-            className={TypeForm === 'Login' && TypeInput === "date" ? 'hidden': 'w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500'}
+            className={typeForm === 'Login' && typeInput === "date" ? 'hidden': 'w-full transform border-b-2 bg-transparent text-lg duration-300 focus-within:border-indigo-500'}
         >
             <input
-                type={TypeInput}
+                type={typeInput}
                 className='w-full border-none bg-transparent outline-none placeholder:italic focus:outline-none'
-                placeholder={TypeInput === 'date' ? "" : placeholder}
+                placeholder={typeInput === 'date' ? "" : placeholder}
+                required={obrigatorio}
+                name={name}
+                onChange={handleOnChange}
+                value={value}
             />
         </div>
     )
