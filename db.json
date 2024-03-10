@@ -19,6 +19,7 @@
       "data_do_cadastro": "2024-02-27"
     },
     {
+
       "id": "b789",
       "name": "Artursm14",
       "senha": "artur111418",
@@ -74,6 +75,15 @@
       "date": "1998-09-11",
       "cost": 0,
       "services": []
-    }
+    },
+    {
+      "id": 3,
+      "login": "pedrobenj",
+      "senha": "senha3",
+      "nome": "Pedro Benjamin",
+      "ativo": true,
+      "data_de_Nascimento": "1999-09-11",
+      "data_do_cadastro": "2024-03-05"
+    }  
   ]
 }
